@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DARSHAN // Data Scientist & Game Developer</title>
+  <meta name="description" content="Portfolio of Darshan - B.Sc Computer Science (AI & Data Science) Student & Game Developer. Exploring AI architectures, Python engineering, and low-level C programming.">
+  
+  <!-- Google Fonts: Orbitron, Fira Code, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for Cyber/Tactical Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyber-theme">
+  <!-- Interactive Matrix/Cyber Particle Canvas -->
+  <canvas id="cyber-canvas"></canvas>
+  <div class="scanline-overlay"></div>
+  <div class="ambient-glow glow-cyan"></div>
+  <div class="ambient-glow glow-crimson"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="cyber-header" id="navbar">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo">
+        <span class="bracket">[</span>
+        <span class="logo-text">DARSHAN</span>
+        <span class="logo-slash">//</span>
+        <span class="bracket">]</span>
+        <span class="status-pip" title="System Online"></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="cyber-nav">
+        <a href="#hero" class="nav-link active"><span class="nav-num">01.</span> INTRO</a>
+        <a href="#skills" class="nav-link"><span class="nav-num">02.</span> SKILLS</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">03.</span> PROJECTS</a>
+        <a href="#about" class="nav-link"><span class="nav-num">04.</span> DOSSIER</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">05.</span> CONTACT</a>
+      </nav>
+
+      <!-- Tactical CTA & Sound Toggle -->
+      <div class="header-actions">
+        <button id="sound-toggle" class="cyber-icon-btn" title="Toggle Tactical Audio FX" aria-label="Toggle Audio">
+          <i class="fa-solid fa-volume-xmark" id="sound-icon"></i>
+          <span class="btn-micro-tag">AUDIO</span>
+        </button>
+        <a href="mailto:elipayaluga@gmail.com" class="cyber-btn cyber-btn-primary">
+          <span class="btn-glitch-text">TRANSMIT [HQ]</span>
+          <i class="fa-solid fa-satellite-dish"></i>
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="#hero" class="drawer-link"><span class="nav-num">// 01</span> INTRO</a>
+      <a href="#skills" class="drawer-link"><span class="nav-num">// 02</span> SKILLS GRID</a>
+      <a href="#projects" class="drawer-link"><span class="nav-num">// 03</span> PROJECTS</a>
+      <a href="#about" class="drawer-link"><span class="nav-num">// 04</span> DOSSIER</a>
+      <a href="#contact" class="drawer-link"><span class="nav-num">// 05</span> TRANSMIT EMAIL</a>
+      <div class="drawer-meta">
+        <span class="tag-status"><i class="fa-solid fa-shield-halved"></i> SECURE NET // PORT: 8080</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="section-container hero-grid">
+        <div class="hero-content">
+          <div class="tactical-badge">
+            <span class="badge-dot pulse-green"></span>
+            <span class="badge-label">SYSTEM CLASSIFIED // OPERATIVE</span>
+            <span class="badge-spec">B.SC CS [AI &amp; DS]</span>
+          </div>
+
+          <p class="hero-subtitle cyber-accent">Data Scientist &amp; Game Developer</p>
+          
+          <h1 class="hero-headline">
+            I BUILD <span class="text-gradient-cyan">GAMES</span> &amp; <br>
+            <span class="text-gradient-crimson">AI ARCHITECTURES.</span>
+          </h1>
+
+          <p class="hero-bio">
+            Undergraduate Computer Science researcher specializing in <strong>Artificial Intelligence &amp; Data Science</strong>. 
+            Synthesizing deep neural networks, computational algorithms, and high-octane game mechanics into immersive interactive simulations and low-level system software.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="mailto:elipayaluga@gmail.com" class="cyber-btn cyber-btn-cyan">
+              <span>CONNECT VIA EMAIL</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a href="#projects" class="cyber-btn cyber-btn-outline">
+              <span>INSPECT MISSIONS</span>
+              <i class="fa-solid fa-crosshairs"></i>
+            </a>
+          </div>
+
+          <!-- Live Terminal Specs HUD -->
+          <div class="hud-metrics">
+            <div class="metric-item">
+              <span class="metric-key">SPECIALIZATION</span>
+              <span class="metric-val text-cyan">AI &amp; DATA SCIENCE</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-key">ENGINE LOGIC</span>
+              <span class="metric-val text-green">2D/3D &amp; SIMS</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-key">CORE SYSTEMS</span>
+              <span class="metric-val text-crimson">PYTHON // C ARCH</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Cyber Visual Frame -->
+        <div class="hero-visual-wrapper">
+          <div class="cyber-frame">
+            <div class="frame-corner top-left"></div>
+            <div class="frame-corner top-right"></div>
+            <div class="frame-corner bottom-left"></div>
+            <div class="frame-corner bottom-right"></div>
+            
+            <div class="frame-header-bar">
+              <span class="frame-tag"><i class="fa-solid fa-terminal"></i> WORKSPACE_HUD_V4.2</span>
+              <span class="frame-coords">LAT 28.61 // LNG 77.20 // STATUS: ONLINE</span>
+            </div>
+
+            <div class="image-viewport">
+              <img src="assets/workspace-visual.jpg" alt="Cyberpunk Game Mafia Developer Workspace" class="hero-img">
+              <div class="scanner-bar"></div>
+              
+              <!-- Floating HUD Tags -->
+              <div class="hud-overlay-tag tag-top">
+                <i class="fa-solid fa-brain"></i> NEURAL ENGINE ACTIVE
+              </div>
+              <div class="hud-overlay-tag tag-bottom">
+                <i class="fa-solid fa-dice-d20"></i> TACTICAL MAFIA RENDER
+              </div>
+            </div>
+
+            <div class="frame-footer-bar">
+              <span class="footer-stat"><i class="fa-solid fa-microchip"></i> COMPUTE: OPTIMAL</span>
+              <span class="footer-stat"><i class="fa-solid fa-network-wired"></i> LATENCY: 12ms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS GRID SECTION -->
+    <section class="skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-subtitle">
+            <span class="bracket">//</span> TACTICAL ARSENAL
+          </div>
+          <h2 class="section-title">SPECIALIZED <span class="text-gradient-cyan">CAPABILITIES</span></h2>
+          <p class="section-desc">Multi-disciplinary technical proficiencies spanning predictive artificial intelligence, robust backend Python pipelines, and bare-metal C systems.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- CARD 1: Data Science & AI -->
+          <div class="cyber-card skill-card" data-accent="cyan">
+            <div class="card-edge-glow"></div>
+            <div class="card-header">
+              <div class="card-icon-box cyan-box">
+                <i class="fa-solid fa-brain-circuit"></i>
+              </div>
+              <span class="card-id">01 // AI_SUITE</span>
+            </div>
+
+            <h3 class="card-title">Data Science &amp; AI</h3>
+            <span class="card-badge badge-cyan">PREDICTIVE &amp; DEEP LEARNING</span>
+
+            <p class="card-text">
+              Engineering intelligence architectures from raw data streams. Developing deep neural models, statistical analysis pipelines, and algorithmic pattern recognition.
+            </p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">Neural Networks</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Data Analytics</span>
+              <span class="tech-tag">NumPy / Pandas</span>
+              <span class="tech-tag">Model Optimization</span>
+              <span class="tech-tag">Computer Vision</span>
+            </div>
+
+            <div class="card-footer-metric">
+              <div class="metric-bar-label">
+                <span>NEURAL CONVERGENCE</span>
+                <span class="text-cyan">98.4%</span>
+              </div>
+              <div class="cyber-progress-bar">
+                <div class="progress-fill fill-cyan" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2: Python Engineering -->
+          <div class="cyber-card skill-card" data-accent="green">
+            <div class="card-edge-glow"></div>
+            <div class="card-header">
+              <div class="card-icon-box green-box">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <span class="card-id">02 // PY_RUNTIME</span>
+            </div>
+
+            <h3 class="card-title">Python Engineering</h3>
+            <span class="card-badge badge-green">BACKEND &amp; AUTOMATION</span>
+
+            <p class="card-text">
+              Architecting modular, highly scalable Python backends, rapid algorithmic prototypes, automated data scraping pipelines, and mathematical simulation engines.
+            </p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">OOP Architecture</span>
+              <span class="tech-tag">Data Pipelines</span>
+              <span class="tech-tag">Async / Concurrency</span>
+              <span class="tech-tag">Automation Scripts</span>
+              <span class="tech-tag">API Integration</span>
+              <span class="tech-tag">Algorithm Design</span>
+            </div>
+
+            <div class="card-footer-metric">
+              <div class="metric-bar-label">
+                <span>EXECUTION EFFICIENCY</span>
+                <span class="text-green">O(log n)</span>
+              </div>
+              <div class="cyber-progress-bar">
+                <div class="progress-fill fill-green" style="width: 95%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3: Low-Level C Programming -->
+          <div class="cyber-card skill-card" data-accent="crimson">
+            <div class="card-edge-glow"></div>
+            <div class="card-header">
+              <div class="card-icon-box crimson-box">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <span class="card-id">03 // C_BAREMETAL</span>
+            </div>
+
+            <h3 class="card-title">Low-Level C Programming</h3>
+            <span class="card-badge badge-crimson">SYSTEMS &amp; HARDWARE LOGIC</span>
+
+            <p class="card-text">
+              Mastery over bare-metal memory structures, dynamic pointer allocation, deterministic finite state machines, and hardware-near transaction systems like ATM logic.
+            </p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">Pointer Arithmetic</span>
+              <span class="tech-tag">Manual Memory Mgmt</span>
+              <span class="tech-tag">State Machines</span>
+              <span class="tech-tag">Data Structures</span>
+              <span class="tech-tag">File System I/O</span>
+              <span class="tech-tag">Deterministic Logic</span>
+            </div>
+
+            <div class="card-footer-metric">
+              <div class="metric-bar-label">
+                <span>MEMORY INTEGRITY</span>
+                <span class="text-crimson">0 LEAKS // VERIFIED</span>
+              </div>
+              <div class="cyber-progress-bar">
+                <div class="progress-fill fill-crimson" style="width: 88%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SHOWCASE SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-subtitle">
+            <span class="bracket">//</span> TACTICAL DEPLOYMENTS
+          </div>
+          <h2 class="section-title">FEATURED <span class="text-gradient-crimson">PROJECTS</span></h2>
+          <p class="section-desc">Key engineering deployments bridging interactive strategy game design with high-reliability system programming.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PROJECT 1: Game Maffia -->
+          <div class="project-card mafia-theme">
+            <div class="project-media">
+              <div class="project-badge-tag tag-strategy">
+                <i class="fa-solid fa-chess-knight"></i> STRATEGY ENGINE
+              </div>
+              <div class="project-art-container">
+                <div class="art-overlay-cyber"></div>
+                <div class="art-grid-lines"></div>
+                <!-- Stylized Tactical Game Silhouette UI -->
+                <div class="mafia-tactical-render">
+                  <div class="crosshair-center"></div>
+                  <div class="tactical-hud-corner tl"></div>
+                  <div class="tactical-hud-corner tr"></div>
+                  <div class="tactical-hud-corner bl"></div>
+                  <div class="tactical-hud-corner br"></div>
+                  <div class="mafia-silhouette-display">
+                    <i class="fa-solid fa-user-secret mafia-icon"></i>
+                    <div class="silhouette-title">SYNDICATE_OPERATIONS</div>
+                    <div class="silhouette-coords">SECTOR 07 // DISTRICT: NOIR</div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-status-bar">
+                <span class="status-live"><span class="pulse-dot"></span> LIVE BUILD V1.4</span>
+                <span class="engine-tag">GAME ENGINE ARCHITECTURE</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-category text-crimson">
+                <i class="fa-solid fa-gun"></i> THEMED GAMING DESIGN &amp; TACTICAL AI
+              </div>
+              <h3 class="project-title">Game Maffia</h3>
+              <p class="project-description">
+                A tactical strategy game set in an atmospheric cyberpunk underworld. Engineered with dynamic territory conquest mechanics, noir aesthetics, real-time AI decision trees for rival syndicates, and a player-driven crime empire economy.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check text-crimson"></i>
+                  <span>Heuristic AI agent behavior models for syndicate bosses</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check text-crimson"></i>
+                  <span>Tactical turn/real-time resource allocation engine</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check text-crimson"></i>
+                  <span>Atmospheric cyberpunk neon visuals &amp; soundscapes</span>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="stack-badge badge-crimson">Game Design</span>
+                <span class="stack-badge">Strategy Mechanics</span>
+                <span class="stack-badge">Python AI Logic</span>
+                <span class="stack-badge">2D/3D Assets</span>
+                <span class="stack-badge">State Management</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn cyber-btn-crimson" onclick="openProjectModal('mafia')">
+                  <span>TACTICAL BRIEF</span>
+                  <i class="fa-solid fa-file-code"></i>
+                </button>
+                <a href="mailto:elipayaluga@gmail.com?subject=Inquiry%20about%20Game%20Maffia%20Project" class="cyber-btn cyber-btn-ghost">
+                  <span>REQUEST ACCESS</span>
+                  <i class="fa-solid fa-lock-open"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: ATM Machine Simulator -->
+          <div class="project-card atm-theme">
+            <div class="project-media">
+              <div class="project-badge-tag tag-c-prog">
+                <i class="fa-solid fa-code"></i> C PROGRAMMING ARCHITECTURE
+              </div>
+              <div class="project-art-container">
+                <div class="art-overlay-cyber"></div>
+                <div class="art-grid-lines"></div>
+                <!-- Stylized ATM C-Logic Terminal UI -->
+                <div class="atm-terminal-render">
+                  <div class="atm-screen-bezel">
+                    <div class="atm-screen-header">
+                      <span class="atm-sys-title">SECURE_ATM_OS // V3.8.1</span>
+                      <span class="atm-lock"><i class="fa-solid fa-shield"></i> ENCRYPTED</span>
+                    </div>
+                    <div class="atm-code-lines">
+                      <code><span class="c-key">#include</span> <span class="c-str">&lt;stdio.h&gt;</span></code>
+                      <code><span class="c-type">typedef struct</span> { <span class="c-type">uint32_t</span> pin; <span class="c-type">double</span> bal; } <span class="c-ident">Account</span>;</code>
+                      <code><span class="c-func">int</span> <span class="c-func">auth_dispense</span>(<span class="c-ident">Account</span> *<span class="c-param">usr</span>, <span class="c-type">double</span> <span class="c-param">amt</span>);</code>
+                      <code><span class="c-comment">// Status: ISO-8583 State Machine Active</span></code>
+                    </div>
+                    <div class="atm-keypad-preview">
+                      <span class="key-pip">[1]</span><span class="key-pip">[2]</span><span class="key-pip">[3]</span>
+                      <span class="key-pip">[4]</span><span class="key-pip">[5]</span><span class="key-pip">[6]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-status-bar">
+                <span class="status-live text-cyan"><span class="pulse-dot cyan-pulse"></span> COMPILED: GCC -O3</span>
+                <span class="engine-tag">FAULT-TOLERANT ARCH</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-category text-cyan">
+                <i class="fa-solid fa-vault"></i> LOW-LEVEL SYSTEM SOFTWARE &amp; SECURITY
+              </div>
+              <h3 class="project-title">ATM Machine Simulator</h3>
+              <p class="project-description">
+                A robust, hardware-emulating transactional banking terminal engineered in pure C. Designed with deterministic finite state machine (FSM) control, memory-safe data structures, PIN hashing verification, persistent ledger I/O, and cash denomination dispensing logic.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check text-cyan"></i>
+                  <span>Rigorous pointer validation &amp; zero memory leak architecture</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check text-cyan"></i>
+                  <span>Greedy algorithm for multi-currency note dispensing</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fa-solid fa-check text-cyan"></i>
+                  <span>Persistent binary record encryption &amp; audit logging</span>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="stack-badge badge-cyan">C Programming</span>
+                <span class="stack-badge">System Architecture</span>
+                <span class="stack-badge">State Machines</span>
+                <span class="stack-badge">Memory Management</span>
+                <span class="stack-badge">File I/O</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn cyber-btn-cyan" onclick="openProjectModal('atm')">
+                  <span>INSPECT SOURCE LOGIC</span>
+                  <i class="fa-solid fa-terminal"></i>
+                </button>
+                <a href="mailto:elipayaluga@gmail.com?subject=Inquiry%20about%20ATM%20Simulator%20Source" class="cyber-btn cyber-btn-ghost">
+                  <span>REQUEST SOURCE</span>
+                  <i class="fa-solid fa-code-branch"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / DOSSIER SECTION -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="about-frame">
+          <div class="about-header">
+            <div class="dossier-tag"><i class="fa-solid fa-fingerprint"></i> PERSONNEL DOSSIER // AGENT FILE #0984</div>
+            <span class="clearance-badge">CLEARANCE: LEVEL 4</span>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-dossier-col">
+              <h3 class="dossier-heading">BACKGROUND // ACADEMIC PROFILE</h3>
+              <p class="dossier-p">
+                I am <strong>Darshan</strong>, a Computer Science scholar pursuing a <strong>B.Sc. in Computer Science with a specialization in Artificial Intelligence &amp; Data Science</strong>. 
+                My focus lies at the crossroads of computational intelligence and interactive virtual environments.
+              </p>
+              <p class="dossier-p">
+                Rather than treating game engineering and machine learning as isolated disciplines, I merge them: utilizing reinforcement learning agents to play and balance strategy games, optimizing physics and state cycles in low-level C, and analyzing gameplay telemetry through scalable Python data pipelines.
+              </p>
+
+              <div class="dossier-specs-list">
+                <div class="spec-row">
+                  <span class="spec-label">DEGREE:</span>
+                  <span class="spec-value">B.Sc. Computer Science (AI &amp; Data Science)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">CORE INTERESTS:</span>
+                  <span class="spec-value">Game AI, Tactical Sims, Systems Programming</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">LANGUAGES:</span>
+                  <span class="spec-value">Python, C, C++, SQL, JavaScript / HTML / CSS</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-label">PRIMARY DISPATCH:</span>
+                  <span class="spec-value text-cyan">elipayaluga@gmail.com</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-interactive-terminal">
+              <div class="terminal-bar">
+                <div class="term-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="term-title">darshan@cyber-core:~$ ./display_matrix.sh</span>
+              </div>
+              <div class="terminal-body" id="interactive-terminal">
+                <p class="term-output text-green">[INIT] Establishing handshake with Neural-Matrix...</p>
+                <p class="term-output text-cyan">[AUTH] Operative: Darshan // Specialization: AI &amp; DS</p>
+                <p class="term-output text-crimson">[WARN] Syndicate game parameters loaded into runtime.</p>
+                <p class="term-output">[OK] Memory layout validated. 0 leaks detected.</p>
+                <div class="term-line">
+                  <span class="term-prompt">darshan@cyber-core:~$</span>
+                  <span class="term-cursor"></span>
+                </div>
+              </div>
+              <div class="terminal-action-row">
+                <button class="term-btn" onclick="runTermCmd('whoami')">run: whoami</button>
+                <button class="term-btn" onclick="runTermCmd('skills')">run: check_skills</button>
+                <button class="term-btn" onclick="runTermCmd('ping')">run: ping_host</button>
+                <button class="term-btn" onclick="clearTerm()">clear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSMIT / CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <div class="contact-card-wrapper">
+          <div class="contact-card">
+            <div class="contact-hud-header">
+              <span class="contact-status-light"></span>
+              <span class="contact-header-text">ESTABLISH SECURE LINK // HQ COMM PROTOCOL</span>
+            </div>
+
+            <div class="contact-inner-grid">
+              <div class="contact-text-side">
+                <h2 class="contact-headline">READY TO COLLABORATE ON <span class="text-gradient-cyan">NEXT-GEN BUILDS?</span></h2>
+                <p class="contact-subtext">
+                  Whether you are seeking an AI &amp; Data Science engineer, a creative Game Developer for tactical simulations, or a low-level C developer, my dispatch line is always open.
+                </p>
+
+                <div class="email-display-box">
+                  <div class="email-info">
+                    <span class="email-label">PRIMARY DISPATCH FREQUENCY:</span>
+                    <a href="mailto:elipayaluga@gmail.com" class="email-address" id="email-target">elipayaluga@gmail.com</a>
+                  </div>
+                  <button class="copy-email-btn" id="copy-btn" title="Copy Email to Clipboard" onclick="copyEmail()">
+                    <i class="fa-regular fa-copy" id="copy-icon"></i>
+                    <span id="copy-text">COPY</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-cta-side">
+                <div class="radar-box">
+                  <div class="radar-sweep"></div>
+                  <div class="radar-center"></div>
+                  <div class="radar-blip blip-1"></div>
+                  <div class="radar-blip blip-2"></div>
+                </div>
+                <a href="mailto:elipayaluga@gmail.com" class="cyber-btn cyber-btn-crimson full-width">
+                  <span>INITIATE TRANSMISSION</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">DARSHAN <span class="text-cyan">//</span> PORTFOLIO</div>
+        <p class="footer-copy">
+          &copy; <span id="year">2026</span> DARSHAN. ALL RIGHTS RESERVED. // B.SC CS [AI &amp; DS]
+        </p>
+      </div>
+
+      <!-- Subtle Technical Indicator -->
+      <div class="footer-indicator">
+        <div class="indicator-group">
+          <span class="indicator-dot pulse-green"></span>
+          <span class="indicator-text">SYSTEM STATUS: <strong class="text-green">NOMINAL</strong></span>
+        </div>
+        <span class="indicator-separator">|</span>
+        <div class="indicator-group">
+          <span class="indicator-text">ENCRYPT: <strong class="text-cyan">AES-256-GCM</strong></span>
+        </div>
+        <span class="indicator-separator">|</span>
+        <div class="indicator-group">
+          <span class="indicator-text">PING: <strong id="live-ping" class="text-crimson">14ms</strong></span>
+        </div>
+        <span class="indicator-separator">|</span>
+        <div class="indicator-group">
+          <span class="indicator-text">RUNTIME: <strong id="runtime-clock" class="text-cyan">00:00:00</strong></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL FOR PROJECT DEEP DIVE -->
+  <div class="cyber-modal" id="project-modal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeProjectModal()"></div>
+    <div class="modal-window">
+      <div class="modal-header">
+        <span class="modal-title" id="modal-title">MISSION_BRIEF.EXE</span>
+        <button class="modal-close-btn" onclick="closeProjectModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Content injected dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button class="cyber-btn cyber-btn-ghost" onclick="closeProjectModal()">ACKNOWLEDGE &amp; CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
